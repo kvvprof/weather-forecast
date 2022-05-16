@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Прогноз погоды онлайн">
+    <meta name="keywords" content="погода, прогноз погоды">
+    <meta name="author" content="@kvvprof">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <title>Прогноз погоды</title>
+</head>
+<body>
+    <main class="main">
+        <section class="main__weather">
+            <div class="main__title">
+                <h3 class="main__author">Разработал <a href="https://t.me/kvvprof" target="blank">@kvvprof</a></h3>
+            </div>
+            <div class="main__info">
+                <div class="main__degrees"></div>
+                <div class="main__info-wrapper">
+                    <div class="main__date"></div>
+                    <div class="main__city"></div>
+                </div>
+            </div>
+        </section>
+        <section class="main__tools">
+            <div class="main__search">
+                <input class="main__search-input" type="text" placeholder="Введите город">
+                <img class="main__search-btn" src="./images/search.svg">
+            </div>
+            <div class="main__load">
+                <ul>
+                    <li class="main__load-1"></li>
+                    <li class="main__load-2"></li>
+                    <li class="main__load-3"></li>
+                </ul>
+            </div>
+            <div class="main__error">Погода не найдена. Проверьте название города или попробуйте позже</div>
+            <div class="main__details"></div>
+            <div class="main__forecast"></div>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

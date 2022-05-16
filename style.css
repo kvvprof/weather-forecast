@@ -1,0 +1,392 @@
+/*Обнуление*/
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+    font-style: normal;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: 400;
+}
+
+/*--------------------*/
+
+:root {
+    --text-color: #ffffff;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-color);
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url(./images/Clouds.jpg);
+    background-size: cover;
+    background-position: center;
+    transition: 2s;
+}
+
+.main__weather {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main__title {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+.main__info {
+    margin-left: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main__city {
+    margin-right: 50px;
+    font-weight: 600;
+    font-size: 60px;
+}
+
+.main__degrees {
+    font-size: 150px;
+    font-weight: 600;
+    line-height: 120px;
+}
+
+.main__info-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.main__date {
+    font-weight: 300;
+    font-size: 26px;
+}
+
+.main__tools {
+    display: flex;
+    flex-direction: column;
+    background-color: #1B3140;
+    opacity: 80%;
+    height: 100%;
+    padding: 20px;
+    min-width: 300px;
+    overflow: auto;
+}
+
+.main__search {
+    display: flex;
+    align-items: flex-end;
+}
+
+.main__search-input {
+    padding: 10px 0px 10px 0px;
+    font-size: 20px;
+    background-color: #1B3140;
+    border-bottom: 1px solid #47535D;
+    margin-right: 10px;
+    color: var(--text-color);
+    font-weight: 300;
+    width: 100%;
+}
+
+.main__search-btn {
+    max-width: 40px;
+    max-height: 40px;
+    background-color: #C8722B;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.main__details {
+    margin-top: 20px;
+    display: none;
+}
+
+.details {
+    display: flex;
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+
+.main__description.details {
+    margin-bottom: 0px;
+}
+
+.main__load {
+    display: none;
+    margin-top: 20px;
+}
+
+.main__load ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.main__load ul li {
+    background-color: #47535D;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    margin: 5px;
+}
+
+.main__load-1 {
+    animation-name: load_1;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    transition-timing-function: linear;
+}
+
+.main__load-2 {
+    animation-name: load_2;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-delay: 0.3s;
+    transition-timing-function: linear;
+}
+
+.main__load-3 {
+    animation-name: load_3;
+    animation-iteration-count: infinite;
+    animation-duration: 1.5s;
+    animation-delay: 0.6s;
+    transition-timing-function: linear;
+}
+
+@keyframes load_1 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes load_2 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes load_3 {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.main__error {
+    display: none;
+    font-size: 12px;
+    margin-top: 10px;
+    line-height: 14px;
+}
+
+.main__forecast {
+    margin-top: 25px;
+    display: none;
+    flex-direction: column;
+}
+
+.main__forecast-view {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 18px;
+    padding-top: 20px;
+    font-weight: 300;
+    border-bottom: 1px solid #47535D;
+    border-top: 1px solid #47535D;
+}
+
+.main__forecast-view p {
+    margin-bottom: 7px;
+}
+
+.main__description-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.main__description {
+    display: flex;
+    align-items: center;
+}
+
+@media screen and (max-width: 1100px) {
+    .main__degrees {
+        font-size: 90px;
+        line-height: 80px;
+    }
+
+    .main__city {
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .main {
+        flex-direction: column;
+    }
+
+    .main__tools {
+        width: 100%;
+        min-width: 0px;
+    }
+
+    .main__info {
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+
+    .main__degrees {
+        font-size: 60px;
+        line-height: 45px;
+    }
+
+    .main__city {
+        font-size: 26px;
+    }
+
+    .main__date {
+        font-size: 20px;
+    }
+
+    .main__title {
+        margin-left: 20px;
+    }
+
+    .main__weather {
+        height: 50%;
+        width: 100%;
+        background-color: #1B3140;
+        opacity: 80%;
+    }
+}
